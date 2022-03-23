@@ -1,1 +1,5 @@
 Fal1out() function name is different from contract name Fallout so we can call this function as normal function as it is public function and gain the ownership of the contract.
+
+```
+await contract.Fal1out()
+```

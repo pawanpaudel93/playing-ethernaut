@@ -1,3 +1,4 @@
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 
@@ -20,5 +21,6 @@ contract CallTelephone {
     telephone.changeOwner(msg.sender);
   }
 }
+```
 
 tx.origin is the address of the account calling the changeOwner and msg.sender is the address of the CallTelephone contract so ownership is changed to the account initiating the changeOwner call.
