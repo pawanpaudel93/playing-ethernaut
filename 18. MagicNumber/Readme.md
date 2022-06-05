@@ -1,3 +1,38 @@
+<img src="magicnumber.png" alt="magicnumber" />
+
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.0;
+
+contract MagicNum {
+
+  address public solver;
+
+  constructor() public {}
+
+  function setSolver(address _solver) public {
+    solver = _solver;
+  }
+
+  /*
+    ____________/\\\_______/\\\\\\\\\_____        
+     __________/\\\\\_____/\\\///////\\\___       
+      ________/\\\/\\\____\///______\//\\\__      
+       ______/\\\/\/\\\______________/\\\/___     
+        ____/\\\/__\/\\\___________/\\\//_____    
+         __/\\\\\\\\\\\\\\\\_____/\\\//________   
+          _\///////////\\\//____/\\\/___________  
+           ___________\/\\\_____/\\\\\\\\\\\\\\\_ 
+            ___________\///_____\///////////////__
+  */
+}
+```
+
+<hr />
+
+# Hack
+
 When solidity code compiles, it is converted to bytecode and bytecode is divided into two types a) Creation code b) Runtime code.
 
 Creation code will never be part of the contract code but is only executed by the EVM once during the transaction that creates the contract and it is the code responsible for the setting of contract code initial state and as well as returing the copy of the runtime code.

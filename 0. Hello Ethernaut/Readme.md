@@ -1,3 +1,5 @@
+# Hack
+
 It is the simple one. Simply follow the steps as instructed and get password from password() function and pass the password to the authenticate() function.
 ```
 await contract.info()

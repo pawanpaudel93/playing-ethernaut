@@ -1,3 +1,5 @@
+<img src="telephone.png" alt="telephone" />
+
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
@@ -12,6 +14,10 @@ contract Telephone {
     }
   }
 }
+
+<hr />
+
+# Hack
 
 contract CallTelephone {
   constructor() public {}

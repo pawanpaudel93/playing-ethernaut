@@ -1,3 +1,44 @@
+<img src="aliencordex.png" alt="aliencordex" />
+
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.0;
+
+import '../helpers/Ownable-05.sol';
+
+contract AlienCodex is Ownable {
+
+  bool public contact;
+  bytes32[] public codex;
+
+  modifier contacted() {
+    assert(contact);
+    _;
+  }
+  
+  function make_contact() public {
+    contact = true;
+  }
+
+  function record(bytes32 _content) contacted public {
+  	codex.push(_content);
+  }
+
+  function retract() contacted public {
+    codex.length--;
+  }
+
+  function revise(uint i, bytes32 _content) contacted public {
+    codex[i] = _content;
+  }
+}
+```
+
+<hr />
+
+# Hack
+
 The AlienCodex contract inherits the Ownable contract and on inspecting the contract.abi we can get that ownable has a state variable owner where owner of the AlienCodex is stored and slot allocation starts with the inherited contract from left to right and Owner is only the contract AlienCodex inherits and slot allocation starts from Owner.
 
 To call any of the function, contact state variable must be true as assert(contact) must be passed. So, call the make_contract function first to pass the modifier.
